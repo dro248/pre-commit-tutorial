@@ -1,7 +1,7 @@
-# pre-commit-tutorial
+# pre-commit Tutorial
 
 ## What is pre-commit?
-pre-commit is awesome package that allows you to feel more confident about the code you are committing by running linters & formatters against it when you go to commit.
+[pre-commit](https://pre-commit.com/) is awesome package that allows you to feel more confident about the code you are committing by running linters & formatters against it when you go to commit.
 
 One of the great things about pre-commit is that it integrates into your Git workflow. Don't worry about forgetting to use it – when you commit, it will just work.
 
