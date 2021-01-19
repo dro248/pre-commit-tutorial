@@ -42,11 +42,8 @@ When you find your code bouncing endlessly between formatters, here is what to d
 - Make sure that no other issues are being reported by pre-commit
 - run the following:
 ```bash
+# This will skip the pre-commit verification altogether
 git commit --no-verify
 ```
-  - This will skip the pre-commit verification altogether.
-
-
 
 Happy coding!
-
