@@ -39,37 +39,12 @@ Just run the following:
 pip install virtualenv==20.0.33
 ```
 
-
-### Q: My pre-commit rules failed! What do I do?
-**A:** As I mentioned before, pre-commit integrates into your git workflow. This integration requires a slight adjustment to your workflow. When you type `git commit`, pre-commit jumps in and runs linters & formatters to help you fix your code.
->This is not where you should be running your unit tests.
-
- Usually, your will fail pre-commit on the first attempt. THIS IS A GOOD THING! 😀
-
-So how do you deal with it?
-
-pre-commit will do its best to stop you from making a Git commit that doesn't pass inspection. Though pre-commit can be bypassed altogether using `git commit --no-verify`, we want to
-
-
-Here is how to handle it:
-
-- **Code formatter:** Code formatters automatically check and change your code. When a formatter (e.g. [black](https://github.com/psf/black), [nbstripout](https://github.com/kynan/nbstripout), etc.) runs, it will automatically change your file. All you need to do is Git add these files again and reattempt to commit.
-
-- **Code linter:** Code linters automatically check your code and then tell you what is wrong with it. When a linter (e.g. [flake8](https://flake8.pycqa.org/en/latest/), [pylint](http://pylint.pycqa.org/en/latest/), etc.) runs, it will not reformat the code. Instead, it will print out a list of things to fix. Update your files, Git add them again, and reattempt to commit.
-
-
-### Q: I have conflicting code formatters! What do I do?
-**A:** Sometimes, you may run into an issue where one formatter (like isort) wants your code to look one way and another (like black) wants it to look another way. While this doesn't always happen, it can occur, leading to an infinite loop.
-
-When you find your code bouncing endlessly between formatters, here is what to do:
+### Q: My code formatters are fighting! What do I do?
+**A:** Sometimes, you may run into an issue where one formatter (like isort) wants your code to look one way and another (like black) wants it to look another way. When you find your code bouncing endlessly between formatters, here is what I do:
 - Make sure that no other issues are being reported by pre-commit
-- run the following:
-```bash
-# This will skip the pre-commit verification altogether
-git commit --no-verify
-```
+- skip pre-commit with `git commit --no-verify`
 
 # Learn More
-Hopefully this helped you get up and running using pre-commit. For more information about pre-commit, I highly recommend watching [this great video series on pre-commit](https://calmcode.io/pre-commit/the-problem.html) by Vincent Warmerdam on https://calmcode.io.
+Hopefully this helped you get up and running using pre-commit. For more information about pre-commit, I highly recommend watching this great [video series on pre-commit](https://calmcode.io/pre-commit/the-problem.html) by Vincent Warmerdam on [calmcode.io](https://calmcode.io).
 
 Happy coding!
